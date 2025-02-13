@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Will You Be My Valentine?</title>
+    <title>Are You Sure?</title>
     <style>
         body {
-            background-color: #ffe6e6;
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
@@ -17,13 +18,28 @@
             padding-top: 100px;
         }
 
-        h1 {
-            font-size: 3em;
-            color: #cc0000;
+        /* Fade-in animation for the image */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         .button-container {
             margin-top: 40px;
+        }
+
+        .go-away:hover {
+            opacity: 0;
         }
 
         button {
@@ -49,11 +65,11 @@
 
 <body>
     <div class="container">
-        <h1>Will you be my Valentine?</h1>
-        <img src="shy.png" alt="shy">
+        <h1>Are you sure?</h1>
+        <img src="angry-goku.jpg" alt="Are You Sure?" class="fade-in" style="max-width:25%; height:auto;">
         <div class="button-container">
-            <a href="ask-post.html"><button>Yes</button></a>
-            <a href="ask-post.html"><button>HELL YES</button></a>
+            <a class="go-away"><button>Yes</button></a>
+            <a href="final.html"><button>No</button></a>
         </div>
     </div>
 </body>
